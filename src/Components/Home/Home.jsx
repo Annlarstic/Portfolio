@@ -14,7 +14,7 @@ const Home = () => {
    <h5 className='text-light'>I am an Frontend Developer</h5>
 
    <div className='cta'>
-    <a href='' download className='btn'>
+    <a href='https://docs.google.com/document/d/1vhIUrlUsdG5fBGMWBGXXzLGIPLVTG82Ol4dHjMwmbnc/edit?usp=sharing' download className='btn'>
     Download CV
     </a>
 
