@@ -1,0 +1,187 @@
+/* header{
+padding-top: 4rem;
+overflow: hidden;
+height: 100vh;
+}
+
+.home_container{
+position: relative;
+height: 100%;
+text-align: center;
+}
+
+.cta{
+display: flex;
+justify-content: center;
+gap: 1.2rem;
+margin-top: 2rem;
+}
+
+.home_social{
+position: absolute;
+flex-direction: column;
+gap: 0.8rem;
+display: flex;
+align-items: center;
+left: 0;
+bottom: 3rem;
+}
+
+.home_social:after{
+width: 1px;
+height: 2rem;
+content: "";
+background: var(--color-primary-variant);
+}
+
+.me{
+position: absolute;
+width: 22rem;
+height: 35rem;
+background: linear-gradient(var(--color-primary-variant), transparent);
+left: calc(50% - 11rem);
+margin-top: 3rem;
+border-radius: 13rem 13rem 0 0;
+overflow: hidden;
+padding: 1rem 1.5rem 2.5rem 1rem;
+}
+
+.me > img {
+margin-left: 0.6rem;
+}
+
+.scroll_down{
+position: absolute;
+font-weight: 300;
+transform: rotate(90deg);
+bottom: 5rem;
+font-size: 0.9rem;
+right: -2.4rem;
+}
+
+@media screen and  (max-width: 1024px) {
+    header{
+    height: 60vh;
+    }
+}
+
+@media screen and(max-width: 600px) {
+    header{
+    height: 100vh;
+    }
+
+    .home_social, .scroll_down{
+    display: none;
+    }
+
+    .me > img {
+    margin-top: 2.5rem;
+    }
+} */
+
+
+
+
+
+header {
+    min-height: 100vh;
+    height: auto; 
+    padding-top: 4rem;
+    overflow: hidden;
+}
+
+.home_container {
+    height: 100%;
+    position: relative;
+    text-align: center;
+    padding-bottom: 7rem; 
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+.home_social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.home_social::after { 
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary-variant);
+}
+
+.me {
+    position: absolute;
+    width: 22rem;
+    height: 35rem;
+    background: linear-gradient(var(--color-primary-variant), transparent);
+    /* FIX: Used margin: auto for vertical centering of the whole block */
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 3rem;
+    border-radius: 13rem 13rem 0 0;
+    overflow: hidden;
+    padding: 0; 
+}
+
+.me > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 2rem; 
+}
+
+.scroll_down {
+    position: absolute;
+    right: -2.4rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+/* --- TABLET/MEDIUM  --- */
+@media screen and (max-width: 1024px) {
+    header {
+        height: 60vh;
+    }
+    
+    .me {
+        width: 18rem; 
+        height: 30rem;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+}
+
+/* --- MOBILE/SMALL --- */
+@media screen and (max-width: 600px) {
+    header {
+        height: auto; 
+        padding-bottom: 6rem;
+    }
+
+    .me {
+        width: 14rem;
+        height: 25rem;
+        margin-top: 2rem;
+    }
+
+    .home_social, 
+    .scroll_down {
+        display: none;
+    }
+}

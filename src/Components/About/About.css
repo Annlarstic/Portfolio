@@ -1,0 +1,240 @@
+/* 
+.about_container{
+grid-template-columns: 30% 40%;
+gap: 6%;
+display: grid;
+}
+
+.about_me{
+width: 90%;
+display: grid;
+place-items: center;
+aspect-ratio: 1/1;
+border-radius: 2rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+background: linear-gradient(-45deg, var(--color-primary-variant));
+}
+
+.about_me_image{
+transition: var(--tranisition);
+overflow: hidden;
+transform: rotate(-17deg);
+border-radius: 2rem;
+}
+
+.about_me_image:hover{
+transform: rotate(0);
+}
+
+.about_cards{
+width: 100%;
+grid-template-columns: repeat(2, 1fr);
+display: grid;
+gap: 2rem;
+}
+
+.about_card{
+padding: 4rem;
+border: 1px solid transparent;
+background: var(--color-primary);
+border-radius: 1rem;
+text-align: center;
+white-space: nowrap;
+transition: var(--tranisition);
+}
+
+.about_card:hover{
+border-color: var(--color-primary-variant);
+background: transparent;
+cursor: default;
+}
+
+.about_icon {
+margin-bottom: 0.4rem;
+font-size: 1.3rem;
+color: var(--color-light);
+}
+
+.about_icon small{
+color: var(--color-light);
+font-size: .7rem;
+}
+
+.about_card h5{
+color: var(--color-light);
+margin: 2rem 0 2.6rem;
+}
+
+.about_content p {
+white-space: nowrap;
+}
+
+
+@media screen and (max-width: 1024px){
+    .about_container{
+    gap: 0;
+    grid-template-columns: 1fr;
+    }
+
+    .about_me{
+    width: 50%;
+    margin: 2rem auto 4rem;
+    }
+
+    .about_content p {
+    margin: 1rem 0 1.5rem; 
+
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .about_me{
+    width: 65%;
+    margin: 0 auto 3rem;
+    }
+
+    .about_cards{
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    }
+
+    .about_content{
+    text-align: center;
+    }
+    
+    .about_content p {
+    margin: 1.5rem;
+    }
+} */
+
+
+
+.about_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: 35% 55%; 
+    gap: 10%; 
+}
+
+.about_me {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, transparent, var(--color-primary-variant));
+    width: 100%; 
+}
+
+.about_me_image {
+    overflow: hidden;
+    border-radius: 2rem;
+    transform: rotate(-10deg); 
+    transition: var(--transition, all 400ms ease); 
+}
+
+.about_me_image:hover {
+    transform: rotate(0);
+}
+
+.about_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 1.5rem; 
+}
+
+.about_card {
+    background: var(--color-primary);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    transition: var(--transition, all 400ms ease);
+}
+
+.about_card:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: pointer;
+}
+
+.about_icon {
+    font-size: 1.5rem; 
+    margin-bottom: 0.7rem;
+    color: var(--color-bg); 
+}
+
+.about_card h5 {
+    color: var(--color-bg); 
+    margin: 1rem 0 0.5rem; 
+}
+
+.about_card small {
+    display: block;
+    color: var(--color-bg);
+    font-size: 0.8rem; 
+}
+
+.about_content p {
+    color: var(--color-text, #666);
+    margin: 2rem 0;
+}
+
+
+/* --- TABLET/MEDIUM SCREEN  --- */
+@media screen and (max-width: 1024px) {
+    .about_container {
+        grid-template-columns: 1fr;
+        gap: 0; 
+    }
+
+    .about_me {
+        width: 60%;
+        margin: 0 auto 3rem;
+    }
+
+    .about_cards {
+        width: 80%;
+        margin: 0 auto 3rem; 
+        gap: 1.5rem;
+    }
+
+    .about_content {
+        text-align: center; 
+    }
+    
+    .about_content p {
+        width: 80%;
+        margin: 0 auto 2rem;
+    }
+}
+
+/* --- MOBILE/SMALL SCREEN --- */
+@media screen and (max-width: 600px) {
+    .about_me {
+        width: 75%;
+        margin: 0 auto 2rem;
+    }
+
+    .about_cards {
+        width: 90%;
+        margin: 0 auto 2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .about_card {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .about_content p {
+        width: 90%;
+        margin: 1.5rem auto;
+        font-size: 0.9rem;
+    }
+}

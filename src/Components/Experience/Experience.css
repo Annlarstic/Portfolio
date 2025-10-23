@@ -1,0 +1,256 @@
+/* 
+#experience {
+padding: 4rem 0;
+background: #f8f9fa;
+}
+
+h2 {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 2rem;
+color: #333;
+}
+
+.experience_container {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-wrap: wrap;
+gap: 2rem;
+}
+
+.experience_frontend {
+background: #fff;
+padding: 2rem;
+border-radius: 1rem;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+width: 100%;
+max-width: 900px;
+flex: 1;
+}
+
+h3 {
+text-align: center;
+margin-bottom: 1rem;
+font-size: 2rem;
+color: #333;
+}
+
+.experience_content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 1.5rem;
+}
+
+.experience_detail {
+ display: flex;
+align-items: center;
+gap: 1rem;
+font-size: 1rem;
+width: 45%;
+margin-bottom: 1.5rem;
+transition: transform 0.3s ease;
+}
+
+.experience_detail:hover {
+transform: scale(1.05);
+}
+
+.experience_icon {
+font-size: 2rem;
+color: #007bff;
+}
+
+.experience_detail h4 {
+font-size: 1.2rem;
+color: #333;
+}
+
+.experience_detail small {
+font-size: 0.9rem;
+color: #888;
+}
+
+.text-light {
+color: #6c757d;
+}
+
+@media screen and (max-width: 768px) {
+
+  .experience_container {
+  justify-content: center;
+  align-items: center;
+  }
+
+  .experience_frontend {
+  width: 80%;
+  }
+
+  .experience_content {
+  justify-content: center;
+  }
+
+  .experience_detail {
+  width: 100%;
+  text-align: center;
+  }
+}
+
+  @media screen and (max-width: 480px) {
+
+  .experience_detail {
+  width: 100%;
+  }
+
+  .experience_icon {
+  font-size: 1.7rem;
+  }
+
+  .experience_detail h4 {
+  font-size: 1rem;
+  }
+} */
+
+
+
+#experience {
+    background: var(--color-light); 
+    padding: 4rem 0;
+}
+
+#experience > h2 { 
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-heading, #333); 
+}
+
+.experience_container {
+    width: 90%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.experience_frontend {
+    background: var(--color-bg-variant, #fff); 
+    padding: 2.5rem;
+    border-radius: 1.5rem; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 45%; 
+    min-width: 300px; 
+}
+
+.experience_frontend h3 { 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem; 
+    color: var(--color-primary, #333);
+}
+
+.experience_content {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+
+.experience_detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience_detail:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience_icon {
+    font-size: 1.8rem;
+    color: var(--color-primary, #007bff);
+    margin-top: 0.1rem; 
+}
+
+.experience_detail_text {
+    line-height: 1.2;
+}
+
+.experience_detail h4 {
+    font-size: 1.1rem;
+    color: var(--color-heading, #333);
+    margin: 0;
+}
+
+.experience_detail small {
+    display: block; 
+    font-size: 0.85rem;
+    color: var(--color-text-light, #888);
+}
+
+.text-light {
+    color: var(--color-text-light, #6c757d);
+}
+
+
+/* --- TABLET/MEDIUM SCREEN */
+@media screen and (max-width: 1024px) {
+    .experience_container {
+        gap: 2rem;
+    }
+
+    .experience_frontend {
+        width: 48%; 
+        padding: 2rem;
+    }
+}
+
+/* --- SMALL TABLET/MOBILE--- */
+@media screen and (max-width: 768px) {
+    .experience_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .experience_frontend {
+        width: 90%; 
+        max-width: 500px;
+    }
+
+    .experience_content {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .experience_detail {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* --- EXTRA SMALL MOBILE --- */
+@media screen and (max-width: 480px) {
+    #experience > h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .experience_frontend {
+        padding: 1.5rem;
+    }
+
+    .experience_icon {
+        font-size: 1.5rem;
+    }
+}
